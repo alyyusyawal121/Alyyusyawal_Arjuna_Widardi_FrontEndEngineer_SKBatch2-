@@ -7,7 +7,7 @@ export async function GET(request: NextRequest ) {
     const searchParams = request.nextUrl.searchParams;
     const cursor = searchParams.get('cursor');
     const apiUrl = new URL("https://himalayas.app/jobs/api");
-    apiUrl.searchParams.set("limit", "20");
+    apiUrl.searchParams.set("limit", "40");
     if(cursor){
         apiUrl.searchParams.set("cursor", cursor);
     }
